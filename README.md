@@ -62,3 +62,8 @@ To run the code on your local machine
 ## Submission
 
 Create a repo in your chosen git repository (make sure it is public so we can access it) and reply with the link to your code. We recommend using Github.
+
+## To Run My Code
+
+- I had to move to the root level and comment out folders and folders_test + change folders_pagination.go package name to folders
+- Doing this and running `go run main.go` outputs current pagination results 
