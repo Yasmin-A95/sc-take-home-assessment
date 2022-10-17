@@ -18,5 +18,5 @@ func main() {
 		return
 	}
 
-	folders.PrettyPrint(res)
+	folders.PrettyPrint(res) // you can access like this => res.Folders[0]
 }
