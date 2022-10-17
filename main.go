@@ -12,11 +12,11 @@ func main() {
 		OrgID: uuid.FromStringOrNil(folders.DefaultOrgID),
 	}
 
-	res, err := folders.GetAllFolders(req)
+	_, err := folders.GetAllFolders(req)
 	if err != nil {
 		fmt.Printf("%v", err)
 		return
 	}
 
-	folders.PrettyPrint(res) // you can access like this => res.Folders[0]
+	//folders.PrettyPrint(res) // you can access like this => res.Folders[0]
 }
