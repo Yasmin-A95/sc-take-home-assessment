@@ -67,3 +67,8 @@ Create a repo in your chosen git repository (make sure it is public so we can ac
 
 - I had to move to the root level and comment out folders and folders_test + change folders_pagination.go package name to folders
 - Doing this and running `go run main.go` outputs current pagination results 
+
+
+### Sources used for refference: 
+- https://slack.engineering/evolving-api-pagination-at-slack/
+- https://learnxinyminutes.com/docs/go/
