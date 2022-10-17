@@ -5,7 +5,8 @@ import (
 )
 
 // TODO move files back to correct spots in the tree .
-func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
+
+func GetAllFolders(req *FetchFolderRequest) (*FetchPagenatedResponse, error) {
 	f := []Folder{}
 	r, _ := FetchAllFoldersByOrgID(req.OrgID)
 	for _, v := range r {
@@ -16,11 +17,16 @@ func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
 		fp = append(fp, &v1)
 	}
 	var p [][]*Folder
-	for i := 0; i < (len(fp) /2); i++ {
+	for i := 0; i < (len(fp) / 2); i++ {
 		p = append(p, fp[i: i+2])
 	}
-	PrettyPrint(p)
-	ffr := &FetchFolderResponse{Folders: fp}
+
+	for i := 0; i < len(p); i++ {
+		rff := &FetchFolderResponse{Folders: p[i]}
+		PrettyPrint(rff)
+	}
+	ffr := &FetchPagenatedResponse{Folders: p} 
+	PrettyPrint(ffr)
 	return ffr, nil
 }
 
@@ -33,7 +39,6 @@ func FetchAllFoldersByOrgID(orgID uuid.UUID) ([]*Folder, error) {
 			resFolder = append(resFolder, folder)
 		}
 	}
-	return resFolder, nil // return resFolder // resFolder == sample.json as all OrgId are the same
+	return resFolder, nil 
 }
 
-// Copy over the `GetFolders` and `FetchAllFoldersByOrgID` to get started
