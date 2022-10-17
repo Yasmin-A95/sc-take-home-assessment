@@ -1,8 +1,22 @@
-# sc-interns-2022
+## To Run My Code
+
+- I had to move to the root level and comment out folders and folders_test
+- and change folders_pagination.go package name to folders
+
+- Doing this and running `go run main.go` outputs current pagination results 
+
+
+### Sources used for refference: 
+- https://slack.engineering/evolving-api-pagination-at-slack/
+- https://learnxinyminutes.com/docs/go/
+
+## Outline 
+
+### sc-interns-2022
 
 The technical take home for SC interns of 2022.
 
-## Compile instruction
+### Compile instruction
 
 Requires `Go` >= `1.19`
 
@@ -13,7 +27,7 @@ To run the code on your local machine
   go run main.go
 ```
 
-## Folder structure
+### Folder structure
 
 ```
 | go.mod
@@ -26,9 +40,10 @@ To run the code on your local machine
     | static.go
 ```
 
-## Instructions
+### Instructions
 
 - This technical assessment consist of 2 components.
+
 - Component 1:
   - within `folders.go`. 
     - We would like you to read through the code and write some comments around what you think the code does.
@@ -59,16 +74,7 @@ To run the code on your local machine
   { data: [9, 10], token: null }
 ```
 
-## Submission
+#### Submission
 
 Create a repo in your chosen git repository (make sure it is public so we can access it) and reply with the link to your code. We recommend using Github.
 
-## To Run My Code
-
-- I had to move to the root level and comment out folders and folders_test + change folders_pagination.go package name to folders
-- Doing this and running `go run main.go` outputs current pagination results 
-
-
-### Sources used for refference: 
-- https://slack.engineering/evolving-api-pagination-at-slack/
-- https://learnxinyminutes.com/docs/go/
